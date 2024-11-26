@@ -1,0 +1,82 @@
+:root {
+  --primary: #fff;
+  --secondary: #c07c28;
+  --background: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "VCR OSD Mono";
+  src: url("fonts/VCR_OSD_MONO.ttf") format("truetype");
+}
+
+body {
+  font-family: "VCR OSD Mono", monospace;
+  background-color: var(--background);
+  color: var(--primary);
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  height: 100vh;
+}
+
+.container img {
+  width: 60%;
+  height: auto;
+  margin-bottom: -1rem;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background);
+  padding: 0 20px;
+  width: 50%;
+}
+
+label {
+  font-size: 1.5rem;
+  margin-bottom: 2px;
+  text-align: left;
+  width: 100%;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  background: transparent;
+  border: 5px solid var(--primary);
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.submit-button {
+  font-family: "VCR OSD Mono", monospace;
+  background-color: var(--background);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 5px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.submit-button:hover {
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
