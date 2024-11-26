@@ -10,13 +10,13 @@
     <div class="container">
       <img src="assets/logo.jpg" alt="" />
       <div class="submit-button">
-        <a href="login.html"
+        <a href="login.php"
           ><input type="submit" value="LOGIN" class="submit-button-1"
         /></a>
-        <a href="register.html"
+        <a href="register.php"
           ><input type="submit" value="REGISTER" class="submit-button-1"
         /></a>
-        <a href="aboutUs.html"
+        <a href="aboutUs.php"
           ><input type="submit" value="ABOUT US" class="submit-button-1"
         /></a>
       </div>

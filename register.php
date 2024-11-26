@@ -34,7 +34,7 @@
       function register(event) {
         event.preventDefault();
         alert("Register berhasil!");
-        window.location.href = "login.html";
+        window.location.href = "login.php";
       }
     </script>
   </body>
