@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="style/main.css" />
+  </head>
+  <body>
+    <div class="nav-logo">
+      <img src="assets/logo.jpg" alt="" />
+    </div>
+    <div class="navbar">
+      <a href="main.html">The Game</a>
+      <a href="gameplay.php">Gameplay</a>
+      <a href="profile.html">Profile</a>
+    </div>
+    <div class="main">
+      <div class="maintext">
+        <img src="assets/logo.jpg" alt="logo" />
+        <p>
+          Undertale adalah game RPG 2D yang dikembangkan oleh Toby Fox, di mana
+          pemain mengendalikan seorang anak yang jatuh ke dunia bawah tanah
+          (Underground), sebuah tempat terpencil yang dihuni oleh monster. Untuk
+          kembali ke permukaan, pemain harus menjelajahi berbagai area,
+          berinteraksi dengan karakter unik, dan membuat keputusan yang
+          memengaruhi jalannya cerita.
+        </p>
+        <p>
+          Game ini dikenal dengan sistem pertarungan inovatifnya, yang
+          memungkinkan pemain untuk memilih bertarung atau menyelesaikan konflik
+          secara damai. Pilihan ini menentukan jalur cerita dan ending, termasuk
+          jalur Pacifist, Neutral, dan Genocide. Undertale mengeksplorasi tema
+          besar seperti empati, konsekuensi pilihan, dan moralitas, dengan
+          humor, emosi, dan musik ikonis yang membuatnya menjadi salah satu game
+          indie terbaik sepanjang masa.
+        </p>
+        <h6>The 3 ending of undertale</h6>
+        <div class="submit-button">
+          <input
+            type="submit"
+            class="submit-button-1"
+            value="PACIFIST"
+            onclick="pacifist(event)"
+          />
+          <input
+            type="submit"
+            class="submit-button-1"
+            value="NEUTRAL"
+            onclick="neutral(event)"
+          />
+          <input
+            type="submit"
+            class="submit-button-1"
+            value="GENOCIDE"
+            onclick="genocide(event)"
+          />
+        </div>
+      </div>
+      <div class="mainimg">
+        <img src="assets/main.png" alt="main" />
+      </div>
+    </div>
+
+    <script>
+      function pacifist(event) {
+        event.preventDefault();
+        window.location.href = "theGame/pacifist.html";
+      }
+      function neutral(event) {
+        event.preventDefault();
+        window.location.href = "theGame/neutral.html";
+      }
+      function genocide(event) {
+        event.preventDefault();
+        window.location.href = "theGame/genocide.html";
+      }
+    </script>
+  </body>
+</html>
