@@ -2,6 +2,7 @@
   --primary: #fff;
   --secondary: #c07c28;
   --background: #000;
+  --border: #868686;
 }
 
 * {
@@ -27,22 +28,21 @@ body {
 
 .nav-logo img {
   display: block;
-  margin: 20px auto;
-  width: 200px;
+  margin: 40px auto;
+  height: 70px;
 }
 
 .navbar {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 70px;
   background-color: var(--background);
-  padding: 1px 0;
-  margin-top: -10px;
+  margin-top: -30px;
 }
 
 .navbar a {
   color: var(--primary);
-  font-size: 15px;
+  font-size: 20px;
   transition: color 0.3s ease;
 }
 
@@ -55,42 +55,44 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 0 30px;
+  padding: 0 169px;
+  margin-top: 70px;
 }
 
 .maintext {
   flex: 1 1 60%;
-  padding: 20px;
   text-align: justify;
 }
 
 .maintext img {
   display: block;
   margin: 0 auto 10px;
-  width: 250px;
+  width: 511px;
   float: left;
-  margin-left: -10px;
+  margin-left: -20px;
 }
 
 .maintext p {
+  font-size: 24px;
   clear: both;
-  line-height: 1rem;
+  line-height: 24px;
   margin-bottom: 20px;
 }
 
 .maintext h6 {
-  font-size: 18px;
-  margin-top: 20px;
+  font-size: 32px;
+  margin: 32px 0;
   text-align: left;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  font-weight: 400;
 }
 
 .submit-button {
+  margin-top: 11px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 30px;
+  gap: 70px;
 }
 
 .submit-button-1 {
@@ -98,8 +100,8 @@ body {
   background-color: var(--background);
   color: var(--primary);
   border: 1px solid var(--primary);
-  padding: 5px 20px;
-  font-size: 1.2rem;
+  padding: 10px 41px;
+  font-size: 40px;
   cursor: pointer;
   text-transform: uppercase;
 }
@@ -114,10 +116,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
 }
 
 .mainimg img {
-  max-width: 300px;
-  height: auto;
+  width: 381px;
+  height: 639px;
 }

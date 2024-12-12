@@ -2,6 +2,7 @@
   --primary: #fff;
   --secondary: #c07c28;
   --background: #000;
+  --border: #868686;
 }
 
 * {
@@ -33,44 +34,32 @@ body {
 }
 
 .container img {
-  width: 60%;
+  width: 70%;
   height: auto;
   margin-bottom: 1rem;
 }
 
 .submit-button {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
-  gap: 30px;
+  gap: 40px;
 }
 
 .submit-button-1 {
-  font-family: "VCR OSD Mono", monospace;
+  font-family: "VCR OSD Mono";
   background-color: var(--background);
   color: var(--primary);
-  border: 1px solid var(--primary);
-  padding: 5px 10px;
-  font-size: 1.5rem;
+  border: 1px solid var(--border);
+  padding: 10px;
+  font-size: 48px;
   cursor: pointer;
   text-transform: uppercase;
+  height: 67px;
   width: auto;
-  min-width: 100px;
 }
 
 .submit-button-1:hover {
   color: var(--secondary);
   border-color: var(--secondary);
-}
-
-@media (max-width: 768px) {
-  .submit-button {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .submit-button-1 {
-    font-size: 1rem;
-    padding: 8px 15px;
-  }
 }
