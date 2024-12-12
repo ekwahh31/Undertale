@@ -3,7 +3,89 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pacifist</title>
+    <title>pacifist</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="../style/theGame.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="nav-logo">
+      <img src="../assets/logo.jpg" alt="" />
+    </div>
+    <div class="navbar">
+      <a href="../main.html">The Game</a>
+      <a href="../gameplay.php">Gameplay</a>
+      <a href="../profile.html">Profile</a>
+    </div>
+    <div class="main">
+      <div class="maintext">
+        <div class="main-logo">
+          <img src="../assets/pacifist-logo.png" alt="pacifist" />
+          <h1>PACIFIST ENDING</h1>
+        </div>
+        <p>
+          Jalur Pacifist tercapai jika pemain tidak membunuh satu pun monster
+          dan menyelesaikan konflik dengan cara damai. Frisk, sang protagonis,
+          menjalin hubungan baik dengan semua karakter utama, membantu mereka
+          mengatasi masalah pribadi, dan menemukan cara untuk membebaskan
+          monster tanpa pengorbanan. Ending ini penuh harapan, memperlihatkan
+          kebahagiaan dan kebebasan para monster, sekaligus memberikan pesan
+          tentang kekuatan empati dan komunikasi.
+        </p>
+        <p>Syarat:</p>
+        <ul>
+          <li>Jangan membunuh satu pun monster sepanjang permainan.</li>
+          <li>
+            Gunakan opsi ACT dan MERCY untuk menyelesaikan pertarungan secara
+            damai.
+          </li>
+          <li>
+            Bangun hubungan baik dengan karakter utama (Toriel, Sans, Papyrus,
+            Undyne, Alphys, dll.).
+          </li>
+          <li>
+            Kunjungi True Lab untuk menyelesaikan latar belakang cerita Alphys.
+          </li>
+        </ul>
+        <p>Cerita:</p>
+        <ul>
+          <li>
+            Setelah membangun hubungan baik dengan semua karakter, pemain
+            mengetahui bahwa monster tidak perlu dikorbankan untuk menghancurkan
+            penghalang yang memisahkan dunia monster dan manusia.
+          </li>
+          <li>
+            Frisk (karakter pemain) membantu para monster mendapatkan kebebasan
+            tanpa ada korban.
+          </li>
+          <li>
+            Ending ini sangat emosional karena semua karakter hidup bahagia, dan
+            Frisk dianggap sebagai pahlawan.
+          </li>
+        </ul>
+        <p>Pesan:</p>
+        <ul>
+          <li>
+            Ending ini menekankan pentingnya empati, komunikasi, dan kerja sama.
+          </li>
+        </ul>
+        <input
+          type="submit"
+          class="submit-button"
+          value="Back"
+          onclick="main(event)"
+        />
+      </div>
+      <div class="mainimg">
+        <img src="../assets/pacifist.png" alt="pacifist" />
+      </div>
+    </div>
+
+    <script>
+      function main(event) {
+        event.preventDefault();
+        window.location.href = "../main.html";
+      }
+    </script>
+  </body>
 </html>

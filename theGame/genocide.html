@@ -3,7 +3,89 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>genocide</title>
+    <title>Genocide</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="../style/theGame.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="nav-logo">
+      <img src="../assets/logo.jpg" alt="" />
+    </div>
+    <div class="navbar">
+      <a href="../main.html">The Game</a>
+      <a href="../gameplay.php">Gameplay</a>
+      <a href="../profile.html">Profile</a>
+    </div>
+    <div class="main">
+      <div class="maintext">
+        <div class="main-logo">
+          <img src="../assets/genocide-logo.png" alt="pacifist" />
+          <h1>GENOCIDE ENDING</h1>
+        </div>
+        <p>
+          Jalur Genocide menggambarkan kehancuran total, di mana pemain membunuh
+          semua monster yang ditemui hingga tidak ada yang tersisa. Chara, jiwa
+          jahat yang terbangkitkan karena aksi pemain, mengambil alih cerita dan
+          menghancurkan dunia bawah tanah sepenuhnya. Ending ini sangat gelap,
+          menyoroti konsekuensi kekerasan dan kehilangan kontrol atas cerita,
+          meninggalkan dunia dalam kehampaan.
+        </p>
+        <p>Syarat:</p>
+        <ul>
+          <li>
+            Bunuh semua monster di setiap area hingga pesan "But Nobody Came"
+            muncul sebelum melanjutkan.
+          </li>
+          <li>
+            Monster NPC, bahkan bos, tidak memiliki kesempatan untuk bertahan
+            hidup.
+          </li>
+        </ul>
+        <p>Cerita:</p>
+        <ul>
+          <li>
+            Pemain menjadi pembunuh tanpa ampun yang menghancurkan dunia bawah
+            tanah sepenuhnya.
+          </li>
+          <li>
+            Karakter seperti Papyrus, Undyne, dan Sans mencoba menghentikan
+            Anda, tetapi semua dibunuh.
+          </li>
+          <li>
+            Setelah semua monster dibunuh, pemain bertemu Chara, jiwa jahat yang
+            bangkit karena aksi pemain. Chara "menghancurkan" dunia, dan pemain
+            kehilangan kendali.
+          </li>
+          <li>
+            Jika pemain mencoba memulai ulang permainan setelah jalur ini,
+            mereka akan menemukan dunia telah "mati".
+          </li>
+        </ul>
+        <p>Pesan:</p>
+        <ul>
+          <li>
+            Ending ini menggambarkan dampak destruktif dari kekerasan, serta
+            memberikan refleksi tentang moralitas pemain.
+          </li>
+        </ul>
+        <input
+          type="submit"
+          class="submit-button"
+          value="Back"
+          onclick="main(event)"
+        />
+      </div>
+      <div class="mainimg">
+        <img src="../assets/genocide.png" alt="pacifist" />
+      </div>
+    </div>
+
+    <script>
+      function main(event) {
+        event.preventDefault();
+        window.location.href = "../main.html";
+      }
+    </script>
+  </body>
 </html>

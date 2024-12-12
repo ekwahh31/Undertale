@@ -58,53 +58,58 @@ body {
   padding: 0 30px;
 }
 
+.main-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.main-logo img {
+  width: 3rem;
+  height: auto;
+  object-fit: contain;
+}
+
+.main-logo h1 {
+  font-size: 2.2rem;
+  margin: 0;
+  text-decoration: underline;
+}
+
 .maintext {
   flex: 1 1 60%;
   padding: 20px;
   text-align: justify;
 }
 
-.maintext img {
-  display: block;
-  margin: 0 auto 10px;
-  width: 250px;
-  float: left;
-  margin-left: -10px;
-}
-
 .maintext p {
   clear: both;
   line-height: 1rem;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-.maintext h6 {
-  font-size: 18px;
-  margin-top: 20px;
-  text-align: left;
-  text-transform: uppercase;
-  margin-bottom: 20px;
+.maintext ul {
+  margin-left: 20px;
+  list-style: disc;
+  line-height: 1rem;
+  margin-bottom: 10px;
 }
 
 .submit-button {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 30px;
-}
-
-.submit-button-1 {
   font-family: "VCR OSD Mono", monospace;
   background-color: var(--background);
   color: var(--primary);
   border: 1px solid var(--primary);
-  padding: 5px 20px;
+  padding: 5px 5px;
   font-size: 1.2rem;
   cursor: pointer;
-  text-transform: uppercase;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
-.submit-button-1:hover {
+.submit-button:hover {
   color: var(--secondary);
   border-color: var(--secondary);
 }
@@ -118,6 +123,6 @@ body {
 }
 
 .mainimg img {
-  max-width: 300px;
+  width: 350px;
   height: auto;
 }

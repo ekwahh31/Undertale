@@ -4,6 +4,81 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>neutral</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="../style/theGame.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="nav-logo">
+      <img src="../assets/logo.jpg" alt="" />
+    </div>
+    <div class="navbar">
+      <a href="../main.html">The Game</a>
+      <a href="../gameplay.php">Gameplay</a>
+      <a href="../profile.html">Profile</a>
+    </div>
+    <div class="main">
+      <div class="maintext">
+        <div class="main-logo">
+          <img src="../assets/neutral-logo.png" alt="pacifist" />
+          <h1>NEUTRAL ENDING</h1>
+        </div>
+        <p>
+          Jalur Neutral terjadi jika pemain membunuh beberapa monster tetapi
+          tidak semua. Ending ini bervariasi tergantung pada siapa yang
+          diselamatkan dan siapa yang dibunuh. Meski pemain berhasil mencapai
+          akhir cerita, dunia bawah tanah tetap berada dalam ketidakpastian.
+          Flowey sering muncul untuk mengingatkan pemain tentang tindakan
+          mereka, menciptakan ending yang ambigu tanpa resolusi penuh.
+        </p>
+        <p>Syarat:</p>
+        <ul>
+          <li>Membunuh beberapa monster, tetapi tidak semuanya.</li>
+          <li>
+            Ending ini otomatis terjadi jika pemain tidak memenuhi syarat untuk
+            Pacifist atau Genocide.
+          </li>
+        </ul>
+        <p>Cerita:</p>
+        <ul>
+          <li>Jalan cerita bervariasi tergantung siapa saja yang dibunuh.</li>
+          <li>
+            Raja Asgore tetap berusaha menghancurkan penghalang, tetapi
+            ending-nya tidak memberikan resolusi penuh.
+          </li>
+          <li>
+            Flowey sering muncul untuk memberikan komentar sinis, mengingat
+            pemain tidak sepenuhnya membantu atau menghancurkan monster.
+          </li>
+          <li>
+            Ending ini meninggalkan banyak pertanyaan tak terjawab, seperti
+            nasib para monster setelah Asgore.
+          </li>
+        </ul>
+        <p>Pesan:</p>
+        <ul>
+          <li>
+            Ending ini mencerminkan hasil dari keputusan yang ambigu dan
+            konsekuensi dari pilihan setengah hati.
+          </li>
+        </ul>
+        <input
+          type="submit"
+          class="submit-button"
+          value="Back"
+          onclick="main(event)"
+        />
+      </div>
+      <div class="mainimg">
+        <img src="../assets/neutral.png" alt="pacifist" />
+      </div>
+    </div>
+
+    <script>
+      function main(event) {
+        event.preventDefault();
+        window.location.href = "../main.html";
+      }
+    </script>
+  </body>
 </html>
