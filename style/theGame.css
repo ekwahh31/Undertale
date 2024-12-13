@@ -120,7 +120,7 @@ body {
 }
 
 .mainimg {
-  flex: 1 1 39%;
+  flex: 1 1 30%;
   display: flex;
   justify-content: center;
   align-items: center;
