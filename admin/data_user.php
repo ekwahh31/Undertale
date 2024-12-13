@@ -15,12 +15,20 @@ $user = $query->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="assets/dashboard.css" rel="stylesheet"/>
+    <title>Admin Panel</title>
 </head>
 <body>
-<div class="main-content">
-            <h1>Dashboard Admin</h1>
-
+<div class="content">
+        <div class="header">ADMIN PANEL</div>
+        <div class="container">
+            <div class="sidebar">
+                <a href="dashboard_admin.php">Admin</a>
+                <a href="data_user.php">User</a>
+                <a href="gameplay.php">Gameplay</a>
+                <a href="logout.php">Log Out</a>
+            </div>
+        <div class="main">
             <?php if (isset($error)) { ?>
                 <p class="error-message"><?php echo htmlspecialchars($error); ?></p>
             <?php } ?>
@@ -53,6 +61,8 @@ $user = $query->fetchAll(PDO::FETCH_ASSOC);
                 </tbody>
             </table>
         </div>
+        </div>
+    </div>
 
         <script>
             function deleteUser(id) {
