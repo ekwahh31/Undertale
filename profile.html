@@ -30,19 +30,28 @@
           <tr>
             <td>Achievement</td>
             <td>:</td>
-            <td></td>
+            <td>
+              <img src="assets/pacifist-achievement.png" alt="">
+              <img src="assets/neutral-achievement.png" alt="">
+              <img src="assets/genocide-achievement.png" alt="">
+            </td>
           </tr>
         </table>
       </div>
       <div class="button">
         <button onclick="back(event)">Back</button>
         <button>Edit</button>
-        <button>Logout</button>
+        <button onclick="logout(event)"">Logout</button>
       </div>
     </div>
 
     <script>
       function back(event) {
+        event.preventDefault();
+        window.location.href = "landingPage.html";
+      }
+
+      function logout(event) {
         event.preventDefault();
         window.location.href = "landingPage.html";
       }
