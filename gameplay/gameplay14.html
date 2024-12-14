@@ -3,9 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cutscene</title>
-
+    <title>Cutscene</title>
     <link rel="stylesheet" href="../style/gameplay.css" />
+    <script>
+      function recordChoice(choice) {
+        let choices = JSON.parse(localStorage.getItem('playerChoices')) || [];
+        choices.push(choice);
+        localStorage.setItem('playerChoices', JSON.stringify(choices));
+      }
+    </script>
   </head>
   <body>
     <div class="logo">
@@ -24,13 +30,14 @@
             </p>
             <p>
               Flowey berkata, "Dengan kekuatan ini, kamu bisa menguasai dunia
-              bawah tanah”.
+              bawah tanah.”
             </p>
           </td>
           <td>
-            <p>Apa yang akan kamu lakukan</p>
-            <a href="gameplay15.html">Terima tawaran Flowey</a>
-            <a href="gameplay15.html">Tolak tawaran Flowey</a>
+            <p>Apa yang akan kamu lakukan?</p>
+            <a href="gameplay15.html" onclick="recordChoice('Terima tawaran Flowey')">Terima tawaran Flowey</a>
+            <br />
+            <a href="gameplay15.html" onclick="recordChoice('Tolak tawaran Flowey')">Tolak tawaran Flowey</a>
           </td>
         </tr>
       </table>

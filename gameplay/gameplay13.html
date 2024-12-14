@@ -3,9 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cutscene</title>
-
+    <title>Cutscene</title>
     <link rel="stylesheet" href="../style/gameplay.css" />
+    <script>
+      function recordChoice(choice) {
+        let choices = JSON.parse(localStorage.getItem('playerChoices')) || [];
+        choices.push(choice);
+        localStorage.setItem('playerChoices', JSON.stringify(choices)); 
+      }
+    </script>
   </head>
   <body>
     <div class="logo">
@@ -28,11 +34,10 @@
             </p>
           </td>
           <td>
-            <p>Apa yang akan kamu lakukan</p>
-            <a href="gameplay14.html">Ikuti toriel dengan sabar.</a>
-            <a href="gameplay14.html"
-              >Beranikan diri untuk menjelajah sendirian</a
-            >
+            <p>Apa yang akan kamu lakukan?</p>
+            <a href="gameplay14.html" onclick="recordChoice('Ikuti Toriel dengan sabar')">Ikuti Toriel dengan sabar</a>
+            <br />
+            <a href="gameplay14.html" onclick="recordChoice('Beranikan diri untuk menjelajah sendirian')">Beranikan diri untuk menjelajah sendirian</a>
           </td>
         </tr>
       </table>
