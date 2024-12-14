@@ -21,6 +21,11 @@
     </div>
 
     <script>
+      function skipCutscene() {
+        window.location.href = "gameplay3.html";
+      }
+      document.body.addEventListener("click", skipCutscene);
+      
       setTimeout(function () {
         window.location.href = "gameplay3.html";
       }, 5000);
