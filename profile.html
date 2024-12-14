@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>profile</title>
+
+    <link rel="stylesheet" href="style/profile.css" />
+  </head>
+  <body>
+    <div class="content">
+      <div class="logo">
+        <h1>PROFILE</h1>
+      </div>
+      <div class="avatar">
+        <img src="assets/avatar.png" alt="Avatar" />
+      </div>
+      <div class="tabel">
+        <table>
+          <tr>
+            <td>Username</td>
+            <td>:</td>
+            <td>eka happy diaz</td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>:</td>
+            <td>dhlsahdlsahdlsad@mhs.unsoed.ac.id</td>
+          </tr>
+          <tr>
+            <td>Achievement</td>
+            <td>:</td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      <div class="button">
+        <button onclick="back(event)">Back</button>
+        <button>Edit</button>
+        <button>Logout</button>
+      </div>
+    </div>
+
+    <script>
+      function back(event) {
+        event.preventDefault();
+        window.location.href = "landingPage.html";
+      }
+    </script>
+  </body>
+</html>

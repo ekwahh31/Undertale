@@ -4,28 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>aboutUs</title>
+
+    <link rel="stylesheet" href="style/aboutUs.css" />
   </head>
   <body>
-    <div class="logo"></div>
+    <div class="logo">
+      <h1>ABOUT US</h1>
+    </div>
     <div class="team">
-      <div class="eka">
+      <div class="profil">
         <img src="assets/giltur.jpg" alt="" />
         <h3>Eka Bintang Wicaksono</h3>
         <h3>H1D023054</h3>
         <h3>UI/UX</h3>
       </div>
-      <div class="diaz">
+      <div class="profil">
         <img src="assets/giltur.jpg" alt="" />
         <h3>Eka Bintang Wicaksono</h3>
         <h3>H1D023054</h3>
         <h3>UI/UX</h3>
       </div>
-      <div class="gilang">
+      <div class="profil">
         <img src="assets/giltur.jpg" alt="" />
         <h3>Eka Bintang Wicaksono</h3>
         <h3>H1D023054</h3>
         <h3>UI/UX</h3>
       </div>
     </div>
+    <button onclick="back(event)">Back</button>
+
+    <script>
+      function back(event) {
+        event.preventDefault();
+        window.location.href = "theGame/genocide.html";
+      }
+    </script>
   </body>
 </html>

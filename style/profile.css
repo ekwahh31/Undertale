@@ -1,0 +1,94 @@
+:root {
+  --primary: #fff;
+  --secondary: #c07c28;
+  --background: #000;
+  --border: #868686;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "VCR OSD Mono";
+  src: url("../fonts/VCR_OSD_MONO.ttf") format("truetype");
+}
+
+body {
+  font-family: "VCR OSD Mono";
+  background-color: var(--background);
+  color: var(--primary);
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo h1 {
+  display: block;
+  width: 500px;
+  margin: 50px;
+  font-size: 110px;
+  border: 10px solid var(--primary);
+  font-weight: 400;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.avatar img {
+  width: 320px;
+  margin-bottom: 50px;
+}
+
+.tabel {
+  padding: 20px 0px;
+  color: var(--primary);
+}
+
+.tabel table tr td {
+  font-size: 48px;
+  padding: 10px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+button {
+  font-size: 48px;
+  font-family: "VCR OSD Mono";
+  border: 3px solid var(--border);
+  background-color: var(--background);
+  color: var(--primary);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--secondary);
+  color: var(--background);
+  border-color: var(--secondary);
+}

@@ -1,0 +1,93 @@
+:root {
+  --primary: #fff; /* Warna teks utama */
+  --secondary: #c07c28; /* Warna aksen */
+  --background: #000; /* Warna latar belakang */
+  --border: #868686; /* Warna border */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "VCR OSD Mono";
+  src: url("../fonts/VCR_OSD_MONO.ttf") format("truetype");
+}
+
+body {
+  font-family: "VCR OSD Mono";
+  background-color: var(--background);
+  color: var(--primary);
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo h1 {
+  display: block;
+  width: 550px;
+  margin: 100px;
+  font-size: 110px;
+  border: 10px solid var(--primary);
+  font-weight: 400;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 89px;
+}
+
+.profil {
+  text-align: center;
+  padding: 20px 0px;
+  border-radius: 8px;
+  width: 320px;
+  color: var(--primary);
+}
+
+.profil img {
+  width: 268px;
+  height: 268px;
+  border-radius: 25px;
+  margin-bottom: 10px;
+}
+
+.profil h3 {
+  margin: 8px 0;
+  font-size: 40px;
+  color: var(--primary);
+  line-height: 40px;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+button {
+  position: absolute;
+  margin-left: 260px;
+  margin-top: 20px;
+  font-size: 48px;
+  font-family: "VCR OSD Mono";
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  color: var(--primary);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--secondary);
+  color: var(--background);
+  border-color: var(--secondary);
+}

@@ -41,7 +41,6 @@ body {
 
 .submit-button {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   gap: 40px;
 }
