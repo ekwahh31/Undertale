@@ -86,20 +86,11 @@ body {
 }
 
 .maintext p {
-  font-size: 22px;
+  font-size: 32px;
   clear: both;
-  line-height: 22px;
+  line-height: 32px;
   margin-top: 20px;
-  text-transform: uppercase;
-}
-
-.maintext ul {
-  font-size: 22px;
-  margin-left: 20px;
-  list-style: disc;
-  line-height: 22px;
-  margin-bottom: 10px;
-  text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
 .submit-button {

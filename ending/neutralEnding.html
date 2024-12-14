@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>neutral ending</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="../style/ending.css" />
+  </head>
+  <body>
+    <div class="nav-logo">
+      <img src="../assets/logo.jpg" alt="" />
+    </div>
+    <div class="navbar">
+      <a href="../main.html">The Game</a>
+      <a href="../gameplay/gameplay1.html">Gameplay</a>
+      <a href="../profile.html">Profile</a>
+    </div>
+    <div class="main">
+      <div class="maintext">
+        <div class="main-logo">
+          <img src="../assets/neutral-logo.png" alt="neutral" />
+          <h1>NEUTRAL ENDING</h1>
+        </div>
+        <p>
+          Perjalananmu di dunia bawah tanah berakhir dengan kebingungan dan
+          ketidakpastian. Kamu tidak sepenuhnya memilih jalan kebaikan atau
+          kehancuran, tetapi memilih untuk bertindak sesuai keinginanmu sendiri.
+          Meskipun beberapa orang yang kamu temui memberimu rasa kasih sayang,
+          tidak semua musuh berhasil kamu selesaikan dengan damai. Dunia bawah
+          tanah tetap penuh ketegangan, dan meskipun kamu tidak membawa
+          kehancuran besar, perdamaian pun belum tercapai sepenuhnya. Kamu
+          meninggalkan dunia ini dengan perasaan kosong, bertanya-tanya apakah
+          masih ada jalan untuk membawa dunia ini ke jalan yang lebih baik.
+        </p>
+        <p>
+          "Terkadang, keputusan yang diambil bisa membawa dampak yang
+          takterduga." – Flowey
+        </p>
+        <p>
+          Kamu kembali ke dunia yang lebih aman, namun dunia bawah tanah masih
+          penuh dengan pertanyaan yang belum terjawab.
+        </p>
+
+        <input
+          type="submit"
+          class="submit-button"
+          value="Back"
+          onclick="main(event)"
+        />
+      </div>
+      <div class="mainimg">
+        <img src="../assets/neutral_ending.png" alt="neutral" width="546px" />
+      </div>
+    </div>
+
+    <script>
+      function main(event) {
+        event.preventDefault();
+        window.location.href = "../main.html";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+:root {
+  --primary: #fff;
+  --secondary: #c07c28;
+  --background: #000;
+  --border: #868686;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "VCR OSD Mono";
+  src: url("../fonts/VCR_OSD_MONO.ttf") format("truetype");
+}
+
+body {
+  font-family: "VCR OSD Mono";
+  background-color: var(--background);
+  color: var(--primary);
+  text-align: center;
+  padding: 47px 499px;
+}
+
+.logo img {
+  display: block;
+  margin: 20px auto;
+  width: 453px;
+  height: 70px;
+}
+
+.cutscene {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.cutscene img {
+  width: 902px;
+  margin: 0;
+  display: block;
+}
+
+.cutscene table {
+  width: 1688px;
+  height: 275px;
+  border: 15px solid var(--border);
+  border-collapse: collapse;
+}
+
+.cutscene table td {
+  font-size: 32px;
+  line-height: 32px;
+  text-align: justify;
+  padding: 20px;
+  border: 15px solid var(--border);
+}
+
+.cutscene table td p {
+  margin-bottom: 20px;
+}
+
+.cutscene table td:last-child p {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.cutscene table td:first-child {
+  width: 70%;
+  text-align: justify;
+}
+
+.cutscene table td:last-child {
+  width: 30%;
+  /* text-align: center; */
+}
+
+.cutscene table td a {
+  position: relative;
+  color: var(--primary);
+  font-size: 28px;
+  display: inline-block;
+  margin-top: 10px;
+  text-align: left;
+  margin-left: 60px;
+}
+
+.cutscene table td a:hover::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -60px;
+  transform: translateY(-60%);
+  width: 40px;
+  height: 36px;
+  background-image: url("../assets/love.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
