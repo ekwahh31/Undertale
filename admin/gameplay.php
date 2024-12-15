@@ -27,7 +27,7 @@ $gameplay = $query->fetchAll(PDO::FETCH_ASSOC);
                 <a href="dashboard_admin.php">Admin</a>
                 <a href="data_user.php">User</a>
                 <a href="gameplay.php">Gameplay</a>
-                <a href="logout.php">Log Out</a>
+                <a href="logout.php">log Out</a>
             </div>
         <div class="main">
             <?php if (isset($error)) { ?>
@@ -61,9 +61,11 @@ $gameplay = $query->fetchAll(PDO::FETCH_ASSOC);
                                 <td><?php echo htmlspecialchars($game['pilihan4']); ?></td>
                                 <td><?php echo htmlspecialchars($game['waktu']); ?></td>
                                 <td><?php echo htmlspecialchars($game['ending']); ?></td>
-                                <td><button onclick="deleteGameplay(<?php echo $game['id']; ?>)">
-                                    <img src="assets/delete.png" alt="delete">
-                                </button></td>
+                                <td>
+                                    <button onclick="deleteGameplay(<?php echo $game['id']; ?>)">
+                                        <img src="assets/delete.png" alt="Delete" style=" width: 30px; height: 30px;">
+                                    </button>
+                                </td>
                             </tr>
                         <?php }
                     } else { ?>
@@ -87,9 +89,8 @@ $gameplay = $query->fetchAll(PDO::FETCH_ASSOC);
                 })
                 .then(response => response.json())
                 .then(data => {
-                    if (data.success) {
-                        alert('Gameplay berhasil dihapus.');
-                        window.location.reload();
+                    if (data.success){
+                            window.location.reload();
                     } else {
                         alert('Terjadi kesalahan saat menghapus gameplay.');
                     }

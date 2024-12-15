@@ -1,89 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cutscene</title>
+    <title>Gameplay 16</title>
     <link rel="stylesheet" href="../style/gameplay.css" />
     <script>
-      const userId = "<?php echo $_SESSION['user_id']; ?>";
+      const userId = "<?php echo $_SESSION['user_id']; ?>";  // Ambil user_id dari session PHP
 
+      // Fungsi untuk mencatat pilihan pemain
       function recordChoice(choice) {
         let choices = JSON.parse(localStorage.getItem('playerChoices')) || [];
         choices.push(choice);
         localStorage.setItem('playerChoices', JSON.stringify(choices));
-        let ending = determineEnding(choices);
-        sendToDatabase(choices, ending);
-        setTimeout(() => {
-          if (ending === "Pacifist Ending") {
-            window.location.href = "../ending/pacifistEnding.html";
-          } else if (ending === "Genocide Ending") {
-            window.location.href = "../ending/genocideEnding.html";
-          } else {
-            window.location.href = "../ending/neutralEnding.html";
-          }
-        }, 1000);
-      }
-
-      function determineEnding(choices) {
-        const pacifistChoices = ["Ikuti dengan sabar", "Tolak tawaran Flowey", "Ikuti jejak kaki", "Bicara dan coba berdamai"];
-        const genocideChoices = ["Terima tawaran Flowey", "Serang tanpa ampun"];
-
-        if (pacifistChoices.every(choice => choices.includes(choice))) {
-          return "Pacifist Ending";
-        } else if (genocideChoices.some(choice => choices.includes(choice))) {
-          return "Genocide Ending";
-        } else {
-          return "Neutral Ending";
+        
+        // Jika sudah ada 4 pilihan, tentukan ending dan kirim data
+        if (choices.length === 4) {
+          let ending = determineEnding(choices);
+          sendToDatabase(choices, ending);
         }
       }
 
+      // Tentukan ending berdasarkan pilihan yang dibuat oleh pengguna
+      function determineEnding(choices) {
+        const pacifistChoices = ["Ikuti Toriel dengan sabar", "Tolak tawaran Flowey", "Ikuti suara bisikan", "Bicara dan coba berdamai"];
+        const genocideChoices = ["Terima tawaran Flowey", "Serang tanpa ampun"];
+
+        if (pacifistChoices.every(choice => choices.includes(choice))) {
+          return "pacifist";
+        } else if (genocideChoices.some(choice => choices.includes(choice))) {
+          return "genocide";
+        } else {
+          return "neutral";
+        }
+      }
+
+      // Kirim data ke server untuk disimpan
       function sendToDatabase(choices, ending) {
         const formData = new FormData();
-        formData.append('user_id', userId);  
-        formData.append('pilihan1', choices[0]);
-        formData.append('pilihan2', choices[1]);
-        formData.append('pilihan3', choices[2]);
-        formData.append('pilihan4', choices[3]);
-        formData.append('ending', ending);
+        formData.append("user_id", userId);
+        formData.append("pilihan1", choices[0]);
+        formData.append("pilihan2", choices[1]);
+        formData.append("pilihan3", choices[2]);
+        formData.append("pilihan4", choices[3]);
+        formData.append("ending", ending);
 
-        fetch('../admin/save_gameplay.php', {
-            method: 'POST',
-            body: formData
+        // Kirim data ke server menggunakan fetch
+        fetch("../admin/save_gameplay.php", {
+            method: "POST",
+            body: formData,
         })
-        .then(response => response.text())
-        .then(data => {
-            console.log('Response from server:', data);
-            localStorage.removeItem('playerChoices');
+        .then((response) => response.json())
+        .then((data) => {
+            console.log("Response from server:", data);
+            if (data.status === "success") {
+                // Redirect ke halaman ending yang sesuai
+                if (data.ending === "pacifist") {
+                    window.location.href = "../ending/pacifistEnding.html";
+                } else if (data.ending === "genocide") {
+                    window.location.href = "../ending/genocideEnding.html";
+                } else {
+                    window.location.href = "../ending/neutralEnding.html";
+                }
+                localStorage.removeItem("playerChoices");  // Hapus pilihan yang sudah disimpan
+            } else {
+                console.error("Error:", data.message);
+            }
         })
-        .catch(error => console.error('Error saving data:', error));
-    }
+        .catch((error) => console.error("Error saving data:", error));
+      }
     </script>
-  </head>
-  <body>
+</head>
+<body>
     <div class="logo">
-      <img src="../assets/logo.jpg" alt="logo" />
+        <img src="../assets/logo.jpg" alt="logo" />
     </div>
     <div class="cutscene">
-      <img src="../assets/16.png" alt="1" width="738px" />
-      <table>
-        <tr>
-          <td>
-            <p>
-              Di puncak perjalananmu, kamu bertemu raja dunia bawah tanah. Dia
-              memandangmu dengan penuh kekuatan dan berkata: <br />
-              "Keputusanmu selama perjalanan ini akan menentukan takdirmu. Apa
-              yang akan kamu lakukan?"
-            </p>
-          </td>
-          <td>
-            <p>Apa yang akan kamu lakukan?</p>
-            <a href="javascript:void(0)" onclick="recordChoice('Bicara dan coba berdamai')">Bicara dan coba berdamai</a>
-            <br/>
-            <a href="javascript:void(0)" onclick="recordChoice('Serang tanpa ampun')">Serang tanpa ampun</a>
-          </td>
-        </tr>
-      </table>
+        <img src="../assets/16.png" alt="1" width="738px" />
+        <table>
+            <tr>
+                <td>
+                    <p>
+                        Di puncak perjalananmu, kamu bertemu raja dunia bawah tanah. Dia
+                        memandangmu dengan penuh kekuatan dan berkata: <br />
+                        "Keputusanmu selama perjalanan ini akan menentukan takdirmu. Apa
+                        yang akan kamu lakukan?"
+                    </p>
+                </td>
+                <td>
+                    <p>Apa yang akan kamu lakukan?</p>
+                    <a href="javascript:void(0)" onclick="recordChoice('Bicara dan coba berdamai')">Bicara dan coba berdamai</a>
+                    <br />
+                    <a href="javascript:void(0)" onclick="recordChoice('Serang tanpa ampun')">Serang tanpa ampun</a>
+                </td>
+            </tr>
+        </table>
     </div>
-  </body>
+</body>
 </html>

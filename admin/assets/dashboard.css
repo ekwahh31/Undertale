@@ -85,7 +85,6 @@ body {
   background-color: var(--background);
   border: 5px solid white;
   display: flex;
-  padding-top: 5px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -103,24 +102,45 @@ table {
   border-collapse: collapse;
   margin: 20px 0;
   font-size: 18px;
-  text-align: center;
+  text-align: left;
 }
 
 table thead tr {
   background-color: var(--border);
   color: var(--primary);
+  text-align: left;
   font-weight: bold;
 }
 
-table th,
-td {
+table th {
   padding: 12px 15px;
   border: 1px solid var(--border);
 }
 
-table th {
-  padding-top: 15px; /* Memberikan sedikit ruang di atas th */
-  padding-bottom: 15px;
+table td {
+  padding: 12px 15px;
+  border: 1px solid var(--border);
+  text-align: center; /* Menyelaraskan teks di tengah secara horizontal */
+  vertical-align: middle; /* Menyelaraskan teks di tengah secara vertikal */
+}
+
+table tbody tr {
+  border-bottom: 1px solid var(--border);
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: var(--background);
+}
+
+table tbody tr:hover {
+  background-color: var(--border);
+  color: var(--primary);
+}
+
+table img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 
 button {
@@ -128,11 +148,5 @@ button {
   color: var(--primary);
   border: none;
   padding: 10px 20px;
-  border-radius: 10px;
   cursor: pointer;
-}
-
-button:hover {
-  background-color: var(--border);
-  color: var(--secondary);
 }

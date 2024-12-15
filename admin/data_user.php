@@ -52,7 +52,10 @@ $user = $query->fetchAll(PDO::FETCH_ASSOC);
                                 <td><?php echo htmlspecialchars($users['username']); ?></td>
                                 <td><?php echo htmlspecialchars($users['email']); ?></td>
                                 <td><?php echo htmlspecialchars($users['created_at']); ?></td>
-                                <td><button onclick="deleteUser(<?php echo $users['id']; ?>)">❌</button></td>
+                                <td>
+                                    <button onclick="deleteUser(<?php echo $users['id']; ?>)">
+                                    <img src="assets/delete.png" alt="Delete" style=" width: 30px; height: 30px;">
+                                    </button></td>
                             </tr>
                         <?php }
                     } else { ?>

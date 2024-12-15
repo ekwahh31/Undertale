@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>profile</title>
-
+    <title>Profile</title>
     <link rel="stylesheet" href="style/profile.css" />
   </head>
   <body>
@@ -20,20 +19,21 @@
           <tr>
             <td>Username</td>
             <td>:</td>
-            <td>eka happy diaz</td>
+            <td id="username"></td> <!-- Username akan dimasukkan melalui JS -->
           </tr>
           <tr>
             <td>Email</td>
             <td>:</td>
-            <td>dhlsahdlsahdlsad@mhs.unsoed.ac.id</td>
+            <td id="email"></td> <!-- Email akan dimasukkan melalui JS -->
           </tr>
           <tr>
             <td>Achievement</td>
             <td>:</td>
             <td>
-              <img src="assets/pacifist-achievement.png" alt="">
-              <img src="assets/neutral-achievement.png" alt="">
-              <img src="assets/genocide-achievement.png" alt="">
+              <!-- Gambar achievement, masing-masing akan diubah berdasarkan status -->
+              <img id="pacifist-achievement" class="achievement" src="assets/pacifist-achievement.png" alt="Pacifist" />
+              <img id="neutral-achievement" class="achievement" src="assets/neutral-achievement.png" alt="Neutral" />
+              <img id="genocide-achievement" class="achievement" src="assets/genocide-achievement.png" alt="Genocide" />
             </td>
           </tr>
         </table>
@@ -41,19 +41,43 @@
       <div class="button">
         <button onclick="back(event)">Back</button>
         <button>Edit</button>
-        <button onclick="logout(event)"">Logout</button>
+        <button onclick="logout(event)">Logout</button>
       </div>
     </div>
 
     <script>
+      fetch('admin/profile.php')
+        .then(response => response.json())
+        .then(data => {
+          if (data.status === 'success') {
+            document.getElementById('username').textContent = data.username;
+            document.getElementById('email').textContent = data.email;
+
+            // Loop untuk menampilkan semua achievement yang dimiliki
+            const achievements = data.achievement; // Asumsi: Ini adalah array achievement
+            achievements.forEach(achievement => {
+              if (achievement === 'pacifist') {
+                document.getElementById('pacifist-achievement').src = 'assets/pacifist-achievement-gold.png';
+              } else if (achievement === 'genocide') {
+                document.getElementById('genocide-achievement').src = 'assets/genocide-achievement-gold.png';
+              } else if (achievement === 'neutral') {
+                document.getElementById('neutral-achievement').src = 'assets/neutral-achievement-gold.png';
+              }
+            });
+          } else {
+            alert(data.message);
+          }
+        })
+        .catch(error => console.error('Error fetching user data:', error));
+
       function back(event) {
         event.preventDefault();
-        window.location.href = "main.html";
+        window.location.href = "main.html";  
       }
 
       function logout(event) {
         event.preventDefault();
-        window.location.href = "index.html";
+        window.location.href = "index.html";  
       }
     </script>
   </body>
